@@ -4,14 +4,49 @@ html, body {
 }
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.quiz,
+.choices {
+    list-style-type: none;
+    padding: 0;
+}
+.choices li {
+    margin-bottom: 5px;
+}
+.choices label {
+    display: flex;
+    align-items: center;
+}
+.choices label, 
+input[type="radio"] {
+    cursor: pointer;
+}
+input[type="radio"] {
+    margin-right: 8px;
+}
+.view-results {
+    padding: 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.my-results {
+    padding: 1rem;
+}
 #ghlogo {
   height: 70px;
   width: auto;
-  
 }
-
 #search, #signup, #about, #submit{
   padding-bottom: 35px;
 }
@@ -44,20 +79,16 @@ html {
   padding-bottom: 0px;
   border-radius: 14px;
 }
-
 .vertical-center {
   width: 100%;
   text-align: center;  /* align the inline(-block) elements horizontally */
   font: 0/0 a;         /* remove the gap between inline(-block) elements */
 }
-
 .vertical-center:before {    /* create a full-height inline block pseudo=element */
   content: ' ';
   display: inline-block;
   vertical-align: middle;  /* vertical alignment of the inline element */
-
 }
-
 .vertical-center > .container {
   max-width: 100%;
   /*border: 1px solid #FFD69A;*/
@@ -65,14 +96,12 @@ html {
   vertical-align: middle;  /* vertical alignment of the inline element */
   font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;        /* <-- reset the font property */
 }
-
 @media (max-width: 768px) {
   .vertical-center:before {
     /* height: auto; */
     display: none;
   }
 }
-
 .inner {
 text-align: left;
 }
@@ -122,11 +151,9 @@ font-weight: 200;
 .form-control {
   margin-bottom: 15px;
 }
-
 #submenu {
   top: 50px;
 }
-
 .footer {
   margin-top: 45px;
   padding-top: 35px;
@@ -135,14 +162,12 @@ font-weight: 200;
   width: 100%;
   background-color: #f5f5f5;
 }
-
 .parallax {
   margin-bottom: 55px;
 }
 .lab {
   background-color: #FFFAF0;
 }
-
 .notebook_page {
   margin-top: 10px;
   margin-right: 25px;
@@ -152,7 +177,6 @@ font-weight: 200;
   border-radius: 7px;
   min-height: 500px;
 }
-
 .reminders{
   min-height: 260px;
   margin-left: 15px;
@@ -163,12 +187,10 @@ font-weight: 200;
   border-radius: 7px;
   background-color: #f5f5f5;
 }
-
 #contentholder{
-
   background-color: #FEFEFE;
   min-height: 70vh;
   padding: 25px;
   border-radius: 9px;
-
 }
+
