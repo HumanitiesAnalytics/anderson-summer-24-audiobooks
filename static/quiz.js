@@ -1,4 +1,4 @@
-var answers = ["A", "C", "B"],
+var answers = ["B", "A", "C", "B", "C", "A", "B", "E"],
     tot = answers.length;
 function getCheckedValue(radioName) {
     var radios = document.getElementsByName(radioName);
@@ -7,14 +7,25 @@ function getCheckedValue(radioName) {
 }
 function getScore() {
     var score = 0;
-    for (var i = 0; i < tot; i++)
-        if (getCheckedValue("question" + i) === answers[i]) score += 1;
-    return score;
+    var full_results = []
+    for (var i = 0; i < tot; i++) {
+        if (getCheckedValue("question" + i) === answers[i]) {
+            score += 1;
+            full_results.push("Correct")
+        }
+        else {
+            full_results.push("Incorrect")
+        }
+    }
+    return score/tot*100;
 }
 function returnScore() {
+    var report = "Your score is " + getScore() + "% <br/>" 
+    for (var i = 0; i < full_results.length; i++) {
+        report += full_results[i] + "<br/> "
     document.getElementById("myresults").innerHTML =
-        "Your score is " + getScore() + "/" + tot;
-    if (getScore() > 2) {
-        console.log("Bravo");
-    }
+        report;
+    // if (getScore() > 2) {
+    //    console.log("Bravo");
+    // }
 }
