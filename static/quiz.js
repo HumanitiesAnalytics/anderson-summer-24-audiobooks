@@ -19,10 +19,12 @@ function getScore() {
     }
     return score/tot*100;
 }
+
 function returnScore() {
     var report = "Your score is " + getScore() + "% <br/>" 
     for (var i = 0; i < full_results.length; i++) {
-        report += full_results[i] + "<br/> "
+        report += full_results[i] + "<br/> ";
+    }
     document.getElementById("myresults").innerHTML =
         report;
     // if (getScore() > 2) {
