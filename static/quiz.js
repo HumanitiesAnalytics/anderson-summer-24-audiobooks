@@ -17,13 +17,14 @@ function getScore() {
             full_results.push("Incorrect")
         }
     }
-    return score/tot*100;
+    return [score/tot*100, full_results];
 }
 
 function returnScore() {
-    var report = "Your score is " + getScore() + "% <br/>" 
-    for (var i = 0; i < full_results.length; i++) {
-        report += full_results[i] + "<br/> ";
+    results = getScore();
+    var report = "Your score is " + results[0] + "% <br/>" 
+    for (var i = 0; i < results[1].length; i++) {
+        report += results[1][i] + "<br/> ";
     }
     document.getElementById("myresults").innerHTML =
         report;
