@@ -6,6 +6,9 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+audio {
+  margin-bottom: 35px;
+}
 
 *,
 *:before,
