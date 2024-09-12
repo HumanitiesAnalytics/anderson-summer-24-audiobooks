@@ -6,7 +6,7 @@ var full_answers = [
     "Middle aged (Jonathan Davis narrated Neal Stephenson's <em>Snow Crash</em> early in his career, but he doesn't report his age or birthdate in his profile)",
     "Literature/fiction (<em>Every Boss Has A Soft Spot</em> by Danielle May)",
     "U.S. (It's actually Ethan Hawke, born in Fort Worth, TX, narrating <em>The Dharma Bums</em> by Jack Kerouac",
-    "Katherine Kellgren was born in the U.S> but went to school in England. Here she's narrating <em>Ramses the Damned</em> by Anne Rice and Christopher Rice",
+    "Katherine Kellgren was born in the U.S. but went to school in England. Here she's narrating <em>Ramses the Damned</em> by Anne Rice and Christopher Rice",
     "<em>Every Boss Has A Soft Spot</em> by Danielle May has a voice synthesized narrator!"
     ];
 var tot = answers.length;
